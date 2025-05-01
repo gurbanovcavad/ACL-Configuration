@@ -1,4 +1,4 @@
-# ACL and OSPF Configuration – Step-by-Step Guide
+# ACL and OSPF Configuration
 
 ## 📝Task
 - Use **OSPF (single area)** for routing between the routers.
@@ -38,27 +38,16 @@
 - Allow **SSH (port 22)** from **PC1** and **PC2** to **2.2.2.2**.
 - **Deny all other traffic** as the final rule.
 
-### 4. SSH Configuration on Router1 (2.2.2.2)
-- Set a hostname and domain name.
-- Create username and password.
-- Generate RSA keys.
-- Enable SSH and configure VTY lines to accept SSH input only.
-
-### 5. Test and Verify
+### 4. Test and Verify
 - From PC0: Confirm it cannot access or ping Khazar.
 - From PC1: Confirm it can access Khazar but not ping it, and can SSH to Router1.
 - From PC2: Confirm it can ping Khazar but not access it, and can SSH to Router1.
 - Use `ping`, `telnet`, `ssh`, and `tracert` commands to verify behavior.
 
----
-
-## Notes
-- Ensure ACLs are applied in the **correct direction** on the correct **interfaces** (inbound/outbound).
-- For SSH to work, confirm each PC has an IP route and DNS setup (if needed) to reach 2.2.2.2.
 ## Project Files
 
 - `.pkt` file containing the full Packet Tracer simulation.
---
 ## Additional Information
 
 - All routers have **hw7** enable password.
+---
